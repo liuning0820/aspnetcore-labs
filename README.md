@@ -19,9 +19,16 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/choose-web-ui
 
 ### Create a minimal web API with ASP.NET Core
 
+See https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api
+
 ```sh
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/min-web-api
 
 dotnet new webapi -minimal -o TodoApi
+
+dotnet dev-certs https --trust
+
+# -k curl 忽略ssl
+curl -kv -X 'GET' 'https://localhost:7137/weatherforecast' -H 'accept: application/json'
+
 
 ```
